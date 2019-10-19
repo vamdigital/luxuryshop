@@ -7,6 +7,17 @@
     "start": "webpack-dev-server --mode development --open --hot",
     "build": "webpack --mode production"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "./node_modules/.bin/eslint — fix",
+      "git add"
+    ]
+  },
   "author": "Vaibhav Shringarpure",
   "license": "MIT",
   "devDependencies": {
@@ -29,6 +40,8 @@
     "eslint-plugin-react-hooks": "^1.7.0",
     "file-loader": "^4.2.0",
     "html-webpack-plugin": "^3.2.0",
+    "husky": "^3.0.9",
+    "lint-staged": "^9.4.2",
     "node-sass": "^4.12.0",
     "prettier": "^1.18.2",
     "prettier-eslint": "^9.0.0",
