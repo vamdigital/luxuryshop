@@ -5,22 +5,22 @@ const HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
   template: './public/index.html',
 });
 
-module.exports ={
+module.exports = {
   entry: './src/index.js',
   output: {
     path: path.join(__dirname, '/dist'),
-    filename: 'index_bundle.js'
+    filename: 'index_bundle.js',
   },
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: ['babel-loader']
+        use: ['babel-loader', 'eslint-loader'],
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
-        use:['file-loader']
+        use: ['file-loader'],
       },
       {
         test: /\.s[ac]ss$/i,
@@ -29,16 +29,10 @@ module.exports ={
           'css-loader',
           {
             loader: 'sass-loader',
-            options: {
-              // Prefer `dart-sass`
-              implementation: require('sass'),
-            },
           },
         ],
-      }
-    ]
+      },
+    ],
   },
-  plugins: [
-    HTMLWebpackPluginConfig
-  ]
+  plugins: [HTMLWebpackPluginConfig],
 };
