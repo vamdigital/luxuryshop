@@ -12,6 +12,7 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage --colors"
   },
+  "proxy": "http://localhost:4000",
   "lint-staged": {
     "**/*.{js,jsx}": [
       "pretty-quick --staged",
