@@ -3,21 +3,21 @@ import { ADD_COUNT, SUB_COUNT, RESET_COUNT } from '../constant'
 export const Increment = count => {
   return {
     type: ADD_COUNT,
-    count
+    payload: count
   }
 }
 
 export const Decrement = count => {
   return {
     type: SUB_COUNT,
-    count
+    payload: count
   }
 }
 
-export const Reset = count => {
+export const Reset = () => {
   return {
     type: RESET_COUNT,
-    count
+    payload: 0
   }
 }
 

@@ -9,13 +9,13 @@ import { Increment, Decrement, Reset } from '../redux/actions/sample'
 export const App = ({ count, increment, decrement, reset }) => {
   const add = e => {
     e.preventDefault()
-    increment()
+    increment(count)
   }
 
   const sub = e => {
     e.preventDefault()
     if (count >= 1) {
-      decrement()
+      decrement(count)
     }
   }
 

@@ -14,7 +14,10 @@ const HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
 module.exports = {
   entry: './src/index.js',
   resolve: {
-    extensions: ['.js', '.jsx', '.scss', '.json', '.css']
+    extensions: ['.js', '.jsx', '.scss', '.json', '.css'],
+    alias: {
+      utils: path.resolve(__dirname, '..', 'src', 'Utils')
+    }
   },
 
   module: {

@@ -1,8 +1,9 @@
+/* eslint-disable import/no-unresolved */
 /* eslint-disable import/named */
 import React from 'react'
 import { shallow } from 'enzyme'
-import { App } from './App'
 import { findByAttr } from '../Utils'
+import { App } from './App'
 
 const setUp = (props = {}) => {
   const component = shallow(<App {...props} />)
