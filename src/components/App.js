@@ -46,18 +46,25 @@ const mapStateToProps = state => {
   }
 }
 
-const mapDispatchToProps = dispatch => {
-  return {
-    increment: count => {
-      dispatch(Increment(count))
-    },
-    decrement: count => {
-      dispatch(Decrement(count))
-    },
-    reset: count => {
-      dispatch(Reset(count))
-    }
-  }
+// const mapDispatchToProps = dispatch => {
+//   return {
+//     increment: count => {
+//       dispatch(Increment(count))
+//     },
+//     decrement: count => {
+//       dispatch(Decrement(count))
+//     },
+//     reset: count => {
+//       dispatch(Reset(count))
+//     }
+//   }
+// }
+
+// Object Way of dispatch - https://learn.co/lessons/map-dispatch-to-props-readme
+const mapDispatchToProps = {
+  increment: Increment,
+  decrement: Decrement,
+  reset: Reset
 }
 
 export default connect(
