@@ -5,6 +5,9 @@ import getCount from '../redux/selector/sample'
 // Import Action Creator Here
 import { Increment, Decrement, Reset } from '../redux/actions/sample'
 
+const marginRight = {
+  marginRight: '10px'
+}
 // We adding export const App because JEST doesn't have access to store so we are gonna test this outside of store
 export const App = ({ count, increment, decrement, reset }) => {
   const add = e => {
@@ -24,16 +27,30 @@ export const App = ({ count, increment, decrement, reset }) => {
     reset()
   }
   return (
-    <div>
+    <div className="container">
       <h1 data-qa="title">Sample Counter App with React - Redux - Reselect</h1>
-      <p data-qa="count">{count}</p>
-      <button type="button" onClick={add} data-qa="increment-button">
+      <h2 className="display-3" data-qa="count">
+        {count}
+      </h2>
+      <button
+        style={marginRight}
+        type="button"
+        className="btn btn-primary"
+        onClick={add}
+        data-qa="increment-button"
+      >
         Increment
       </button>
-      <button type="button" onClick={sub} data-qa="decrement-button">
+      <button
+        style={marginRight}
+        type="button"
+        className="btn btn-primary"
+        onClick={sub}
+        data-qa="decrement-button"
+      >
         decrement
       </button>
-      <button type="button" onClick={res} data-qa="reset-button">
+      <button type="button" className="btn btn-danger" onClick={res} data-qa="reset-button">
         reset
       </button>
     </div>
