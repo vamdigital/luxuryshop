@@ -1,33 +1,18 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-
+import { Switch, Route } from 'react-router-dom'
+import HomePage from '../pages/Home'
+import Shop from '../pages/Shop'
 import './App.scss'
-import videoMp4 from '../assets/video/background-video1.mp4'
-import videoWebm from '../assets/video/background-video1.webm'
 
-const propTypes = {
-  title: PropTypes.string
-}
-
-const defaultProps = {
-  title: 'React Shopping Cart'
-}
-const App = props => {
-  const { title } = props
+const App = () => {
   return (
     <div>
-      <video autoPlay loop playsInline muted>
-        <source src={videoMp4} type="video/mp4" />
-        <source src={videoWebm} type="video/webm" />
-      </video>
-      <div className="something">
-        <h1>{title}</h1>
-      </div>
+      <Switch>
+        <Route path="/" exact component={() => <HomePage />} />
+        <Route path="/Shop" exact component={() => <Shop />} />
+      </Switch>
     </div>
   )
 }
-
-App.propTypes = propTypes
-App.defaultProps = defaultProps
 
 export default App
