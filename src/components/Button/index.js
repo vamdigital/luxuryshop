@@ -13,6 +13,7 @@ const TYPE_RESET = 'reset'
 const propTypes = {
   buttonText: PropTypes.string,
   dataQa: PropTypes.string,
+  dataId: PropTypes.string,
   buttonVariant: PropTypes.oneOf([PRIMARY_BUTTON, SECONDARY_BUTTON]),
   buttonType: PropTypes.oneOf([TYPE_BUTTON, TYPE_SUBMIT, TYPE_RESET]),
   className: PropTypes.string,
@@ -22,6 +23,7 @@ const propTypes = {
 const defaultProps = {
   buttonText: '',
   dataQa: '',
+  dataId: null,
   className: '',
   buttonVariant: PRIMARY_BUTTON,
   buttonType: TYPE_BUTTON,
@@ -29,7 +31,7 @@ const defaultProps = {
 }
 
 const Button = props => {
-  const { buttonText, dataQa, className, buttonVariant, buttonType, clickHandler } = props
+  const { buttonText, dataQa, className, buttonVariant, buttonType, clickHandler, dataId } = props
 
   const additionalClassName = buttonVariant === 'primary' ? 'primary' : 'secondary'
 
@@ -40,6 +42,7 @@ const Button = props => {
         data-qa={dataQa}
         type={buttonType}
         onClick={clickHandler}
+        data-id={dataId}
       >
         {buttonText}
       </button>

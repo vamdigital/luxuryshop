@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
-import Button from '../../components/Button'
+import ProductCard from '../../components/Card'
 import './shop.scss'
 
 const Shop = () => {
@@ -15,102 +15,102 @@ const Shop = () => {
           you.
         </h2>
         <ul className="card">
-          <li className="card-item">
-            <div className="card-content">
-              <img src="https://i.ibb.co/dg2jdjk/1.jpg" alt="Fashion" />
-              <p className="product-title">Skinny mid-rise Trousers</p>
-              <p className="product-price">£130.00</p>
-              <Button buttonText="Add to Cart" buttonType="button" buttonVariant="primary" />
-            </div>
-          </li>
-          <li className="card-item">
-            <div className="card-content">
-              <img src="https://i.ibb.co/dg2jdjk/1.jpg" alt="Fashion" />
-              <p className="product-title">Skinny mid-rise Trousers</p>
-              <p className="product-price">£130.00</p>
-              <Button buttonText="Add to Cart" buttonType="button" buttonVariant="primary" />
-            </div>
-          </li>
-          <li className="card-item">
-            <div className="card-content">
-              <img src="https://i.ibb.co/dg2jdjk/1.jpg" alt="Fashion" />
-              <p className="product-title">Skinny mid-rise Trousers</p>
-              <p className="product-price">£130.00</p>
-              <Button buttonText="Add to Cart" buttonType="button" buttonVariant="primary" />
-            </div>
-          </li>
-          <li className="card-item">
-            <div className="card-content">
-              <img src="https://i.ibb.co/dg2jdjk/1.jpg" alt="Fashion" />
-              <p className="product-title">Skinny mid-rise Trousers</p>
-              <p className="product-price">£130.00</p>
-              <Button buttonText="Add to Cart" buttonType="button" buttonVariant="primary" />
-            </div>
-          </li>
-          <li className="card-item">
-            <div className="card-content">
-              <img src="https://i.ibb.co/dg2jdjk/1.jpg" alt="Fashion" />
-              <p className="product-title">Skinny mid-rise Trousers</p>
-              <p className="product-price">£130.00</p>
-              <Button buttonText="Add to Cart" buttonType="button" buttonVariant="primary" />
-            </div>
-          </li>
-          <li className="card-item">
-            <div className="card-content">
-              <img src="https://i.ibb.co/dg2jdjk/1.jpg" alt="Fashion" />
-              <p className="product-title">Skinny mid-rise Trousers</p>
-              <p className="product-price">£130.00</p>
-              <Button buttonText="Add to Cart" buttonType="button" buttonVariant="primary" />
-            </div>
-          </li>
-          <li className="card-item">
-            <div className="card-content">
-              <img src="https://i.ibb.co/dg2jdjk/1.jpg" alt="Fashion" />
-              <p className="product-title">Skinny mid-rise Trousers</p>
-              <p className="product-price">£130.00</p>
-              <Button buttonText="Add to Cart" buttonType="button" buttonVariant="primary" />
-            </div>
-          </li>
-          <li className="card-item">
-            <div className="card-content">
-              <img src="https://i.ibb.co/dg2jdjk/1.jpg" alt="Fashion" />
-              <p className="product-title">Skinny mid-rise Trousers</p>
-              <p className="product-price">£130.00</p>
-              <Button buttonText="Add to Cart" buttonType="button" buttonVariant="primary" />
-            </div>
-          </li>
-          <li className="card-item">
-            <div className="card-content">
-              <img src="https://i.ibb.co/dg2jdjk/1.jpg" alt="Fashion" />
-              <p className="product-title">Skinny mid-rise Trousers</p>
-              <p className="product-price">£130.00</p>
-              <Button buttonText="Add to Cart" buttonType="button" buttonVariant="primary" />
-            </div>
-          </li>
-          <li className="card-item">
-            <div className="card-content">
-              <img src="https://i.ibb.co/dg2jdjk/1.jpg" alt="Fashion" />
-              <p className="product-title">Skinny mid-rise Trousers</p>
-              <p className="product-price">£130.00</p>
-              <Button buttonText="Add to Cart" buttonType="button" buttonVariant="primary" />
-            </div>
-          </li>
-          <li className="card-item">
-            <div className="card-content">
-              <img src="https://i.ibb.co/dg2jdjk/1.jpg" alt="Fashion" />
-              <p className="product-title">Skinny mid-rise Trousers</p>
-              <p className="product-price">£130.00</p>
-              <Button buttonText="Add to Cart" buttonType="button" buttonVariant="primary" />
-            </div>
-          </li>
-          <li className="card-item">
-            <div className="card-content">
-              <img src="https://i.ibb.co/dg2jdjk/1.jpg" alt="Fashion" />
-              <p className="product-title">Skinny mid-rise Trousers</p>
-              <p className="product-price">£130.00</p>
-              <Button buttonText="Add to Cart" buttonType="button" buttonVariant="primary" />
-            </div>
-          </li>
+          <ProductCard
+            productImage="https://i.ibb.co/dg2jdjk/1.jpg"
+            key="1"
+            productAltText="Fashion"
+            productId="1"
+            productPrice="130"
+            productTitle="Skinny mid-rise Trousers"
+          />
+          <ProductCard
+            productImage="https://i.ibb.co/dg2jdjk/1.jpg"
+            key="1"
+            productAltText="Fashion"
+            productId="1"
+            productPrice="130"
+            productTitle="Skinny mid-rise Trousers"
+          />
+          <ProductCard
+            productImage="https://i.ibb.co/dg2jdjk/1.jpg"
+            key="1"
+            productAltText="Fashion"
+            productId="1"
+            productPrice="130"
+            productTitle="Skinny mid-rise Trousers"
+          />
+          <ProductCard
+            productImage="https://i.ibb.co/dg2jdjk/1.jpg"
+            key="1"
+            productAltText="Fashion"
+            productId="1"
+            productPrice="130"
+            productTitle="Skinny mid-rise Trousers"
+          />
+          <ProductCard
+            productImage="https://i.ibb.co/dg2jdjk/1.jpg"
+            key="1"
+            productAltText="Fashion"
+            productId="1"
+            productPrice="130"
+            productTitle="Skinny mid-rise Trousers"
+          />
+          <ProductCard
+            productImage="https://i.ibb.co/dg2jdjk/1.jpg"
+            key="1"
+            productAltText="Fashion"
+            productId="1"
+            productPrice="130"
+            productTitle="Skinny mid-rise Trousers"
+          />
+          <ProductCard
+            productImage="https://i.ibb.co/dg2jdjk/1.jpg"
+            key="1"
+            productAltText="Fashion"
+            productId="1"
+            productPrice="130"
+            productTitle="Skinny mid-rise Trousers"
+          />
+          <ProductCard
+            productImage="https://i.ibb.co/dg2jdjk/1.jpg"
+            key="1"
+            productAltText="Fashion"
+            productId="1"
+            productPrice="130"
+            productTitle="Skinny mid-rise Trousers"
+          />
+          <ProductCard
+            productImage="https://i.ibb.co/dg2jdjk/1.jpg"
+            key="1"
+            productAltText="Fashion"
+            productId="1"
+            productPrice="130"
+            productTitle="Skinny mid-rise Trousers"
+          />
+          <ProductCard
+            productImage="https://i.ibb.co/dg2jdjk/1.jpg"
+            key="1"
+            productAltText="Fashion"
+            productId="1"
+            productPrice="130"
+            productTitle="Skinny mid-rise Trousers"
+          />
+          <ProductCard
+            productImage="https://i.ibb.co/dg2jdjk/1.jpg"
+            key="1"
+            productAltText="Fashion"
+            productId="1"
+            productPrice="130"
+            productTitle="Skinny mid-rise Trousers"
+          />
+          <ProductCard
+            productImage="https://i.ibb.co/dg2jdjk/1.jpg"
+            key="1"
+            productAltText="Fashion"
+            productId="1"
+            productPrice="130"
+            productTitle="Skinny mid-rise Trousers"
+          />
         </ul>
       </div>
     </section>
