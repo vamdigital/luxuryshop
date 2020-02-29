@@ -10,7 +10,7 @@ const Header = props => {
   return (
     <header>
       <Link to="/">
-        <Logo width={100} height={100} fill={fillColor} strokeWidth="1%" />
+        <Logo width={80} height={80} fill={fillColor} strokeWidth="1%" />
       </Link>
     </header>
   )
