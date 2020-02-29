@@ -13,8 +13,8 @@ const TYPE_RESET = 'reset'
 const propTypes = {
   buttonText: PropTypes.string,
   dataQa: PropTypes.string,
-  buttonVariant: PropTypes.oneOfType([PRIMARY_BUTTON, SECONDARY_BUTTON]),
-  buttonType: PropTypes.oneOfType([TYPE_BUTTON, TYPE_SUBMIT, TYPE_RESET]),
+  buttonVariant: PropTypes.oneOf([PRIMARY_BUTTON, SECONDARY_BUTTON]),
+  buttonType: PropTypes.oneOf([TYPE_BUTTON, TYPE_SUBMIT, TYPE_RESET]),
   className: PropTypes.string,
   clickHandler: PropTypes.func
 }
