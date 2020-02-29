@@ -62,6 +62,10 @@ module.exports = {
     ]
   },
 
+  devServer: {
+    historyApiFallback: true
+  },
+
   output: {
     filename: 'index.bundle.js',
     path: path.join(__dirname, '/public')
