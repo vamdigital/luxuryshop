@@ -1,4 +1,4 @@
-import { ADD_COUNT, SUB_COUNT, RESET_COUNT } from '../constant'
+import { ADD_COUNT, SUB_COUNT, RESET_COUNT } from '../types'
 
 export const Increment = count => {
   return {

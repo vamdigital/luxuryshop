@@ -34,11 +34,29 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
-              modules: true,
+              modules: false,
               sourceMap: true
             }
           },
           'sass-loader'
+        ]
+      },
+      {
+        test: /\.(png|jpg|gif|mp4|webm)$/,
+        use: ['file-loader']
+      },
+      {
+        test: /\.svg$/,
+        use: [
+          {
+            loader: 'babel-loader'
+          },
+          {
+            loader: 'react-svg-loader',
+            options: {
+              jsx: true // true outputs JSX tags
+            }
+          }
         ]
       }
     ]

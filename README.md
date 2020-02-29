@@ -1,7 +1,7 @@
-# VAM Digital's React Redux BoilerPlate
+# Luxury Shop - A React Shopping Cart
 
-## Author: Vaibhav Shringarpure
+## Author: VAM Digital Limited
 
 ## Version: 0.0.1
 
-## Dated: 19.10.2019
+## Dated: 29.02.2020
