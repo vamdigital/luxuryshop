@@ -1,15 +1,24 @@
 const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HTMLWebpackPlugin = require('html-webpack-plugin')
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 const HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
   template: './public/index.html',
   inject: 'body',
+  // favicon: './public/favicon.ico',
   hash: true,
   stats: {
     children: false
   }
 })
+
+const MiniCssExtractPluginConfig = new MiniCssExtractPlugin({
+  filename: 'style.css',
+  chunkFilename: '[name].css'
+})
+
+const FaviconsWebpackPluginConfig = new FaviconsWebpackPlugin('./public/favicon-32x32.png')
 
 module.exports = {
   entry: './src/index.js',
@@ -46,6 +55,10 @@ module.exports = {
         use: ['file-loader']
       },
       {
+        test: /\.(ico|png)$/,
+        use: 'file-loader?name=assets/[name].[ext]'
+      },
+      {
         test: /\.svg$/,
         use: [
           {
@@ -71,11 +84,5 @@ module.exports = {
     path: path.join(__dirname, '/public')
   },
 
-  plugins: [
-    HTMLWebpackPluginConfig,
-    new MiniCssExtractPlugin({
-      filename: 'style.css',
-      chunkFilename: '[name].css'
-    })
-  ]
+  plugins: [HTMLWebpackPluginConfig, MiniCssExtractPluginConfig, FaviconsWebpackPluginConfig]
 }
