@@ -7,10 +7,18 @@ import './header.scss'
 const Header = props => {
   const { local } = props
   const fillColor = local.pathname === '/' ? '#ffffff' : '#000000'
+  const isHomeClassName = local.pathname === '/' ? 'home-header' : ''
+
   return (
-    <header>
+    <header className={isHomeClassName}>
+      <Link to="/Shop" className="nav">
+        Shop
+      </Link>
       <Link to="/">
-        <Logo width={80} height={80} fill={fillColor} strokeWidth="1%" />
+        <Logo width={80} height={80} fill={fillColor} />
+      </Link>
+      <Link to="/Cart" className="nav">
+        Cart (0)
       </Link>
     </header>
   )

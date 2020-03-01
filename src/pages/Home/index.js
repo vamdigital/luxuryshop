@@ -13,7 +13,7 @@ const HomePage = () => {
       <div className="home-content">
         <h1 className="home-title">The Collection</h1>
         <h2 className="home-blurb">
-          Discover the designs and dive in to the worl of fashion and amazing clothing range.
+          Discover the designs and dive in to the world of fashion and amazing clothing range.
         </h2>
         <Link to="/Shop" className="home-cta">
           Shop Now

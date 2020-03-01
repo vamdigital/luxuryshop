@@ -25,7 +25,7 @@ const Shop = () => {
           />
           <ProductCard
             productImage="https://i.ibb.co/dg2jdjk/1.jpg"
-            key="1"
+            key="2"
             productAltText="Fashion"
             productId="1"
             productPrice="130"
@@ -33,7 +33,7 @@ const Shop = () => {
           />
           <ProductCard
             productImage="https://i.ibb.co/dg2jdjk/1.jpg"
-            key="1"
+            key="3"
             productAltText="Fashion"
             productId="1"
             productPrice="130"
@@ -41,7 +41,7 @@ const Shop = () => {
           />
           <ProductCard
             productImage="https://i.ibb.co/dg2jdjk/1.jpg"
-            key="1"
+            key="4"
             productAltText="Fashion"
             productId="1"
             productPrice="130"
@@ -49,7 +49,7 @@ const Shop = () => {
           />
           <ProductCard
             productImage="https://i.ibb.co/dg2jdjk/1.jpg"
-            key="1"
+            key="5"
             productAltText="Fashion"
             productId="1"
             productPrice="130"
@@ -57,7 +57,7 @@ const Shop = () => {
           />
           <ProductCard
             productImage="https://i.ibb.co/dg2jdjk/1.jpg"
-            key="1"
+            key="6"
             productAltText="Fashion"
             productId="1"
             productPrice="130"
@@ -65,7 +65,7 @@ const Shop = () => {
           />
           <ProductCard
             productImage="https://i.ibb.co/dg2jdjk/1.jpg"
-            key="1"
+            key="7"
             productAltText="Fashion"
             productId="1"
             productPrice="130"
@@ -73,7 +73,7 @@ const Shop = () => {
           />
           <ProductCard
             productImage="https://i.ibb.co/dg2jdjk/1.jpg"
-            key="1"
+            key="8"
             productAltText="Fashion"
             productId="1"
             productPrice="130"
@@ -81,7 +81,7 @@ const Shop = () => {
           />
           <ProductCard
             productImage="https://i.ibb.co/dg2jdjk/1.jpg"
-            key="1"
+            key="9"
             productAltText="Fashion"
             productId="1"
             productPrice="130"
@@ -89,7 +89,7 @@ const Shop = () => {
           />
           <ProductCard
             productImage="https://i.ibb.co/dg2jdjk/1.jpg"
-            key="1"
+            key="10"
             productAltText="Fashion"
             productId="1"
             productPrice="130"
@@ -97,7 +97,7 @@ const Shop = () => {
           />
           <ProductCard
             productImage="https://i.ibb.co/dg2jdjk/1.jpg"
-            key="1"
+            key="11"
             productAltText="Fashion"
             productId="1"
             productPrice="130"
@@ -105,7 +105,7 @@ const Shop = () => {
           />
           <ProductCard
             productImage="https://i.ibb.co/dg2jdjk/1.jpg"
-            key="1"
+            key="12"
             productAltText="Fashion"
             productId="1"
             productPrice="130"

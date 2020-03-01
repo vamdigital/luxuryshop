@@ -1,9 +1,53 @@
 header {
-  position: absolute;
+  position: fixed;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  padding-top: 1.5em;
   width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
   color: #ffffff;
+  background: #ffffff;
   z-index: 300;
+
+  .nav {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #172345;
+    font-size: 0.85em;
+    font-weight: 600;
+    text-decoration: none;
+    position: relative;
+    padding: 0.5em 0;
+
+    &:after {
+      content: '';
+      width: 0;
+      height: 2px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0px;
+      background: #333333;
+      transition: width 0.2s linear;
+    }
+
+    &:hover {
+      color: #41599b;
+      &:after {
+        width: 100%;
+      }
+    }
+  }
+
+  &.home-header {
+    background: transparent;
+    justify-content: center;
+    .nav {
+      display: none;
+    }
+  }
 }
