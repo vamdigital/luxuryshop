@@ -1,9 +1,11 @@
+/* eslint-disable no-console */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 import ProductCard from '../../components/Card'
 import './shop.scss'
 
-const Shop = () => {
+const Shop = props => {
+  const { Products } = props
   return (
     <section className="page-section" id="shop">
       <div className="container">
@@ -15,102 +17,17 @@ const Shop = () => {
           you.
         </h2>
         <ul className="card">
-          <ProductCard
-            productImage="https://i.ibb.co/dg2jdjk/1.jpg"
-            key="1"
-            productAltText="Fashion"
-            productId="1"
-            productPrice="130"
-            productTitle="Skinny mid-rise Trousers"
-          />
-          <ProductCard
-            productImage="https://i.ibb.co/dg2jdjk/1.jpg"
-            key="2"
-            productAltText="Fashion"
-            productId="1"
-            productPrice="130"
-            productTitle="Skinny mid-rise Trousers"
-          />
-          <ProductCard
-            productImage="https://i.ibb.co/dg2jdjk/1.jpg"
-            key="3"
-            productAltText="Fashion"
-            productId="1"
-            productPrice="130"
-            productTitle="Skinny mid-rise Trousers"
-          />
-          <ProductCard
-            productImage="https://i.ibb.co/dg2jdjk/1.jpg"
-            key="4"
-            productAltText="Fashion"
-            productId="1"
-            productPrice="130"
-            productTitle="Skinny mid-rise Trousers"
-          />
-          <ProductCard
-            productImage="https://i.ibb.co/dg2jdjk/1.jpg"
-            key="5"
-            productAltText="Fashion"
-            productId="1"
-            productPrice="130"
-            productTitle="Skinny mid-rise Trousers"
-          />
-          <ProductCard
-            productImage="https://i.ibb.co/dg2jdjk/1.jpg"
-            key="6"
-            productAltText="Fashion"
-            productId="1"
-            productPrice="130"
-            productTitle="Skinny mid-rise Trousers"
-          />
-          <ProductCard
-            productImage="https://i.ibb.co/dg2jdjk/1.jpg"
-            key="7"
-            productAltText="Fashion"
-            productId="1"
-            productPrice="130"
-            productTitle="Skinny mid-rise Trousers"
-          />
-          <ProductCard
-            productImage="https://i.ibb.co/dg2jdjk/1.jpg"
-            key="8"
-            productAltText="Fashion"
-            productId="1"
-            productPrice="130"
-            productTitle="Skinny mid-rise Trousers"
-          />
-          <ProductCard
-            productImage="https://i.ibb.co/dg2jdjk/1.jpg"
-            key="9"
-            productAltText="Fashion"
-            productId="1"
-            productPrice="130"
-            productTitle="Skinny mid-rise Trousers"
-          />
-          <ProductCard
-            productImage="https://i.ibb.co/dg2jdjk/1.jpg"
-            key="10"
-            productAltText="Fashion"
-            productId="1"
-            productPrice="130"
-            productTitle="Skinny mid-rise Trousers"
-          />
-          <ProductCard
-            productImage="https://i.ibb.co/dg2jdjk/1.jpg"
-            key="11"
-            productAltText="Fashion"
-            productId="1"
-            productPrice="130"
-            productTitle="Skinny mid-rise Trousers"
-          />
-          <ProductCard
-            productImage="https://i.ibb.co/dg2jdjk/1.jpg"
-            key="12"
-            productAltText="Fashion"
-            productId="1"
-            productPrice="130"
-            productTitle="Skinny mid-rise Trousers"
-          />
+          {Products.map(product => (
+            <ProductCard
+              productImage={product.productImage}
+              productHoverImage={product.productHoverImage}
+              key={product.productId}
+              productAltText={product.productAltText}
+              productId={product.productId}
+              productPrice={product.productPrice}
+              productTitle={product.productTitle}
+            />
+          ))}
         </ul>
       </div>
     </section>

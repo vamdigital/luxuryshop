@@ -45,9 +45,14 @@ header {
 
   &.home-header {
     background: transparent;
-    justify-content: center;
     .nav {
-      display: none;
+      color: #ffffff;
+
+      &:hover {
+        &:after {
+          background: #ffffff;
+        }
+      }
     }
   }
 }

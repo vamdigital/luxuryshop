@@ -1,9 +1,13 @@
-import React from 'react'
+/* eslint-disable no-console */
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import Button from '../Button'
 
 const propTypes = {
   productImage: PropTypes.string,
+  productHoverImage: PropTypes.string,
   productAltText: PropTypes.string,
   productTitle: PropTypes.string,
   productPrice: PropTypes.string,
@@ -13,6 +17,7 @@ const propTypes = {
 
 const defaultProps = {
   productImage: '',
+  productHoverImage: '',
   productAltText: '',
   productTitle: '',
   productPrice: '',
@@ -23,16 +28,32 @@ const defaultProps = {
 const ProductCard = props => {
   const {
     productImage,
+    productHoverImage,
     productAltText,
     productTitle,
     productPrice,
     productId,
     currencySymbol
   } = props
+
+  const [showHoverItem, setShowHoverItem] = useState(false)
+
   return (
     <li className="card-item">
       <div className="card-content">
-        <img src={productImage} alt={productAltText} />
+        <Link
+          to={`Product/${productId}`}
+          onMouseEnter={() => {
+            setShowHoverItem(true)
+          }}
+          onMouseLeave={() => {
+            setShowHoverItem(false)
+          }}
+        >
+          {!showHoverItem && <img src={productImage} alt={productAltText} />}
+          {showHoverItem && <img src={productHoverImage} alt={productAltText} />}
+        </Link>
+
         <p className="product-title">{productTitle}</p>
         <p className="product-price">
           {currencySymbol}
@@ -43,6 +64,11 @@ const ProductCard = props => {
           buttonType="button"
           buttonVariant="primary"
           dataId={productId}
+          clickHandler={e => {
+            e.preventDefault()
+            e.stopPropagation()
+            console.log('button clicked')
+          }}
         />
       </div>
     </li>

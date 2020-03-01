@@ -76,12 +76,14 @@ module.exports = {
   },
 
   devServer: {
-    historyApiFallback: true
+    historyApiFallback: true,
+    contentBase: './'
   },
 
   output: {
     filename: 'index.bundle.js',
-    path: path.join(__dirname, '/public')
+    path: path.join(__dirname, '/public'),
+    publicPath: '/'
   },
 
   plugins: [HTMLWebpackPluginConfig, MiniCssExtractPluginConfig, FaviconsWebpackPluginConfig]
