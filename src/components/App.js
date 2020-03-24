@@ -4,6 +4,7 @@ import { Switch, Route, withRouter } from 'react-router-dom'
 import HomePage from '../pages/Home'
 import Shop from '../pages/Shop'
 import Product from '../pages/Product'
+import Cart from '../pages/Cart'
 import Header from './Header'
 import './App.scss'
 
@@ -28,17 +29,19 @@ const Products = [
 
 const App = props => {
   const { location } = props
+  console.log(process.env.API_PROD_URL)
   return (
     <div>
       <Header local={location} />
       <Switch>
-        <Route exact path="/" component={() => <HomePage />} />
+        <Route exact path="/" render={() => <HomePage />} />
         <Route exact path="/Shop" render={() => <Shop Products={Products} />} />
         <Route
           exact
           path="/Product/:productId"
           render={routerProps => <Product {...routerProps} Products={Products} />}
         />
+        <Route exact path="/Cart" render={() => <Cart />} />
       </Switch>
     </div>
   )
