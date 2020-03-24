@@ -59,6 +59,14 @@
       padding: 1em;
       width: 100%;
       background: #e0dfdf;
+
+      .card-content__wrapper {
+        min-height: 460px;
+      }
+
+      a {
+        display: inline-block;
+      }
     }
 
     .card-content p {
