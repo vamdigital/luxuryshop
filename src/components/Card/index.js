@@ -41,18 +41,20 @@ const ProductCard = props => {
   return (
     <li className="card-item">
       <div className="card-content">
-        <Link
-          to={`Product/${productId}`}
-          onMouseEnter={() => {
-            setShowHoverItem(true)
-          }}
-          onMouseLeave={() => {
-            setShowHoverItem(false)
-          }}
-        >
-          {!showHoverItem && <img src={productImage} alt={productAltText} />}
-          {showHoverItem && <img src={productHoverImage} alt={productAltText} />}
-        </Link>
+        <div className="card-content__wrapper">
+          <Link
+            to={`Product/${productId}`}
+            onMouseEnter={() => {
+              setShowHoverItem(true)
+            }}
+            onMouseLeave={() => {
+              setShowHoverItem(false)
+            }}
+          >
+            {!showHoverItem && <img src={productImage} alt={productAltText} />}
+            {showHoverItem && <img src={productHoverImage} alt={productAltText} />}
+          </Link>
+        </div>
 
         <p className="product-title">{productTitle}</p>
         <p className="product-price">
