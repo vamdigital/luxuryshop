@@ -2,4 +2,26 @@
   position: relative;
   display: flex;
   padding-top: 150px;
+
+  .product-page-left-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: calc(100vh - 150px);
+    width: 50%;
+    background: #d3e1e6;
+  }
+
+  .product-page-right-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 50%;
+  }
+
+  img {
+    object-fit: cover;
+    height: 100%;
+    object-position: top;
+  }
 }
