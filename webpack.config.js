@@ -1,6 +1,7 @@
 const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HTMLWebpackPlugin = require('html-webpack-plugin')
+const DOTENV = require('dotenv-webpack')
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 const HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
@@ -12,6 +13,8 @@ const HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
     children: false
   }
 })
+
+const DotEnvPluginConfig = new DOTENV({})
 
 const MiniCssExtractPluginConfig = new MiniCssExtractPlugin({
   filename: 'style.css',
@@ -86,5 +89,10 @@ module.exports = {
     publicPath: '/'
   },
 
-  plugins: [HTMLWebpackPluginConfig, MiniCssExtractPluginConfig, FaviconsWebpackPluginConfig]
+  plugins: [
+    HTMLWebpackPluginConfig,
+    MiniCssExtractPluginConfig,
+    FaviconsWebpackPluginConfig,
+    DotEnvPluginConfig
+  ]
 }
